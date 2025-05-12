@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { color } from "../../style/color";
+import HeaderLogo from "../../assets/HeaderLogo.svg";
 
 interface HeaderProps {
   isLoggedIn?: boolean;
@@ -14,16 +15,23 @@ const Header = ({ isLoggedIn = false }: HeaderProps) => {
 
 const TokenHeader = () => {
   return (
-    <GroupWrapper>
-      <StyledLink to="#">타자연습</StyledLink>
-      <StyledLink to="#">마이페이지</StyledLink>
-      <LogoutBnt>로그아웃</LogoutBnt>
-    </GroupWrapper>
+    <Container>
+      <img src={HeaderLogo} alt="logo" style={{ marginLeft: "313px" }} />
+      <GroupWrapper>
+        <StyledLink to="#">타자연습</StyledLink>
+        <StyledLink to="#">마이페이지</StyledLink>
+        <LogoutBnt>로그아웃</LogoutBnt>
+      </GroupWrapper>
+    </Container>
   );
 };
 
 const NoTokenHeader = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <img src={HeaderLogo} alt="logo" style={{ marginLeft: "313px" }} />
+    </Container>
+  );
 };
 
 const Container = styled.header`

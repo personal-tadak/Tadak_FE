@@ -1,7 +1,12 @@
 import styled from "@emotion/styled";
+import HeaderLogo from "../../assets/HeaderLogo.svg";
 
 export const NoTokenHeader = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <img src={HeaderLogo} alt="logo" style={{ marginLeft: "313px" }} />
+    </Container>
+  );
 };
 
 const Container = styled.header`

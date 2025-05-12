@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import { color } from "../../style/color";
+import HeaderLogo from "../../assets/HeaderLogo.svg";
 
 export const TokenHeader = () => {
   return (
     <Container>
+      <img src={HeaderLogo} alt="logo" style={{ marginLeft: "313px" }} />
       <GroupWrapper>
         <StyledLink to="#">타자연습</StyledLink>
         <StyledLink to="#">마이페이지</StyledLink>
